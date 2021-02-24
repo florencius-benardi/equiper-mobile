@@ -1,0 +1,55 @@
+.select-datasheet .ant-select-arrow{
+    display:none
+}
+
+.select-datasheet .container{
+    position: relative;
+    top: 0;
+    right: 0;
+    display: inline-block;
+}
+
+.select-datasheet .button{
+    border: none;
+    padding: 0 !important;
+    margin-left: -35px;
+    margin-top: 5px;
+    background-color: transparent;
+    box-shadow: none;
+    border-radius:0;
+    height:auto;
+    right:5px;
+}
+
+.select-datasheet .ant-select-selection__clear{
+    right:30px;
+}
+
+
+.select-datasheet .ant-select-selection{
+    border:none;
+    border-radius: 0;
+    height:20px;
+}
+
+.select-datasheet .ant-select-selection__rendered{
+    line-height:20px;
+}
+
+/* table */
+th.col-number, 
+td.col-number {
+    text-align: right !important;
+}
+
+td.col-overflow{
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+th.col-center, 
+td.col-center {
+    text-align: center !important;
+}

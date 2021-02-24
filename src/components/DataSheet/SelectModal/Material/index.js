@@ -1,0 +1,42 @@
+import React from '@/components/DataSheet/SelectModal/Material/react'
+import DefaultSelect from '../Default'
+import Api from '@/components/DataSheet/SelectModal/Material/@/helpers/api';
+
+const api = new Api();
+
+
+const columns = [
+  {
+    title: 'Code',
+    dataIndex: 'code',
+    sorter: true,
+    width:200
+  },
+  {
+    title: 'Description',
+    dataIndex: 'description',
+    width: 250
+  },
+]
+
+const config = {
+  api: null,
+  //api to get select options with string
+  apiName: null,
+  //param api for apiName
+  apiParam: null,
+  //api to get select options by reference id
+  apiWithRef: null,
+  //if true select require reference id before fetching
+  requireRefId: false,
+  //field to show in dropdown
+  dataName: 'code',
+  //field to show description in bottom of dropdown
+  dataDescription: 'description',
+  //columns to show in table modal
+  columns: columns,
+}
+
+export default (props)=>{
+  return <DefaultSelect {...config} {...props}/>
+}

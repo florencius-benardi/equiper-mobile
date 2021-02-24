@@ -1,0 +1,48 @@
+.ant-select-arrow{
+    display:none
+}
+
+.container{
+    position: relative;
+    top: 0;
+    right: 0;
+    display: inline-block;
+}
+
+.button {
+    border: none;
+    padding: 0 !important;
+    margin-left: -25px;
+    margin-top: 5px;
+    background-color: transparent;
+    box-shadow: none;
+    border-radius:0;
+    height:auto;
+}
+
+.ant-select-selection__clear{
+    right:30px;
+}
+
+.select-desc{
+    line-height: normal;
+    margin-bottom: 0;
+}
+
+/* table */
+th.col-number, 
+td.col-number {
+    text-align: right !important;
+}
+
+td.col-overflow{
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+th.col-center, 
+td.col-center {
+    text-align: center !important;
+}

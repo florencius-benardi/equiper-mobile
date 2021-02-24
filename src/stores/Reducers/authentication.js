@@ -1,0 +1,58 @@
+import * as actionTypes from '../Actions/actionTypes';
+import { updateObject } from '../../hoc/Shared/utility';
+
+const initialState = {
+    token: null,
+    userId: null,
+    error: null,
+    loading: false,
+    authRedirectPath: '/'
+};
+
+const authStart = (state, action) => {
+    return updateObject(state, {
+        error: null, loading: true
+    });
+};
+
+
+const authSuccess = (state, action) => {
+    return updateObject(state, {
+        token: action.idToken,
+        userId: action.userId,
+        error: null,
+        loading: false
+    });
+};
+
+const authFailure = (state, action) => {
+    return updateObject(state, {
+        error: action.error,
+        loading: false
+    });
+};
+
+const logout = (state, action) => {
+    return updateObject(state, {
+        token: null,
+        userId: null
+    });
+};
+
+const setAuthRedirectPath = (state, action) => {
+    return updateObject(state, { authRedirectPath: action.path })
+}
+
+const reducer = (state = initialState, action) => {
+    switch (action.type) {
+        case actionTypes.AUTHENTICATION_PROCESS: return authStart(state, action);
+        case actionTypes.AUTHENTICATION_SUCCESS: return authSuccess(state, action);
+        case actionTypes.AUTHENTICATION_FAILURE: return authFailure(state, action);
+        case actionTypes.AUTHENTICATION_LOGOUT: return logout(state, action);
+        case actionTypes.SET_AUTHENTICATE_REDIRECT_PATH: return setAuthRedirectPath(state, action);
+        default:
+            return state;
+    }
+};
+
+export default reducer;

@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./src",
+        "paths": {
+            "@components/*": [
+                "components/*"
+            ],
+            "@containers/*": [
+                "containers/*"
+            ],
+            "@hoc/*": [
+                "hoc/*"
+            ],
+            "@hooks/*": [
+                "hooks/*"
+            ],
+            "@actions/*": [
+                "stores/Actions/*"
+            ],
+            "@reducers/*": [
+                "stores/Reducers/*"
+            ]
+        }
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}

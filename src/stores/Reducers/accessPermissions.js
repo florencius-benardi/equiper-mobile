@@ -1,5 +1,5 @@
-import * as actionTypes from '../Actions/actionTypes';
-import { updateObject } from '../../hoc/Shared/utility';
+import * as actionTypes from '@Actions/actionTypes';
+import { updateObject } from '@hoc/Shared/utility';
 
 const initialState = {
     token: null,

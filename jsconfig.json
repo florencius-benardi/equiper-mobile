@@ -19,6 +19,9 @@
             ],
             "@reducers/*": [
                 "stores/Reducers/*"
+            ],
+            "@sagas/*": [
+                "stores/Sagas/*"
             ]
         }
     },

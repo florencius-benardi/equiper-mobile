@@ -1,6 +1,5 @@
 /* eslint-disable array-callback-return */
 import React from 'react';
-import { } from 'react-router-dom';
 import { Redirect, Route, Switch } from 'react-router-dom';
 
 const RouteHandler = (link) => {

@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { applyMiddleware, combineReducers, createStore } from 'redux';
 import thunkMiddleware from 'redux-thunk';
+import createSagaMiddleware from 'redux-saga';
 import { Provider } from 'react-redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
@@ -9,7 +10,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as Sentry from '@sentry/react';
 import { Integrations } from "@sentry/tracing";
-
+import { watchAuth } from "@sagas";
 import authReducer from '@reducers';
 
 Sentry.init({
@@ -23,7 +24,13 @@ Sentry.init({
   tracesSampleRate: 1.0,
 });
 
-const composedEnhancer = composeWithDevTools(applyMiddleware(thunkMiddleware))
+const sagaMiddleware = createSagaMiddleware();
+
+const composedEnhancer = composeWithDevTools(
+  applyMiddleware(thunkMiddleware, sagaMiddleware),
+)
+
+sagaMiddleware.run(watchAuth);
 
 const rootReducer = combineReducers({
   auth: authReducer,

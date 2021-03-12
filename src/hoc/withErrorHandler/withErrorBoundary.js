@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 // import Modal from '../../components/UI/Modal/Modal';
-import Aux from '@/hoc/Auxs/auxiliary';
-import useHttpErrorHandler from '@/hoc/hooks/http-error-handler';
+import Aux from '@hoc/Auxs/auxiliary';
+import useHttpErrorHandler from '@hooks/http-error-handler';
 
 class WithErrorHandler extends Component {
 

@@ -1,0 +1,9 @@
+.DropdownNavigation {
+    cursor: pointer;
+}
+
+.AvatarNavigation {
+    background-color: #aaa;
+    vertical-align: middle;
+    margin-right: 5px;
+}
